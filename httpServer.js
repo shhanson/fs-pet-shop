@@ -13,7 +13,6 @@ let server = http.createServer(function(req, res) {
     if (req.url === '/pets' || req.url.match(petRegExp)) {
         routes["/pets/"](req, res);
 
-        // res.end(petDataText);
     } else {
         res.statusCode = 404;
         res.setHeader("Content-Type", "text/plain");
